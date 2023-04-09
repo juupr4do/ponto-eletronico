@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Case </title>
+        <link rel="stylesheet" href="/css.css" >
+        <link rel="icon" href="../kidopi/fotos/logo2.png">
+    </head>
+    <body>
+        <div class="titulo">
+            <center>
+                <br>
+                <br>
+                <strong>Ilumeo Desafio</strong>
+            </center>
+        </div>
+        <center>
+            <form action="/ponto_saida" method="POST" class="design2 ajuste">
+                <center>
+                    <p> Bem vindo! </p>
+                    <p> Clique para dar entrada </p>
+                    <input type="text" id="hora_entrada" name="hora_entrada" style="display:none" value="">
+                    <input type="text" id="data" name="data" style="display:none" value="">
+                    <button name = "entrada" type="submit" class="botao_ponto"> Entrada </button>
+                </center>
+            </form>
+            
+        </center>
+    </body>
+    <script>
+        // coletando data da entrada
+        const timeElapsed = Date.now();
+        const today = new Date(timeElapsed);
+        var hora = today.getTime()/1000;
+        hora = parseInt(hora);
+        document.getElementById('hora_entrada').value = hora;
+
+        var data = today.toLocaleDateString();
+        document.getElementById('data').value = data;
+        
+
+    </script>
+</html>

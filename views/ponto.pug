@@ -1,0 +1,42 @@
+
+<html>
+    <head>
+        <title> Case </title>
+        <link rel="stylesheet" href="/css.css" >
+        <link rel="icon" href="../kidopi/fotos/logo2.png">
+    </head>
+    <body>
+        <div class="titulo">
+            <center>
+                <br>
+                <br>
+                <strong>Ilumeo Desafio</strong>
+            </center>
+        </div>
+        <center>
+            <form action="/saiu" method="POST" class="design2 ajuste">
+                <p align = "right" style = "margin-right: 100px"> Horas Trabalhadas Hoje: </p> <h1 align = "right"> #{entrada} </h1>
+                <center>
+                    <input type="text" id="horasTrabalhadas" name="horasTrabalhadas" style="display:none" value="#{entrada}">
+                    <input type="text" id="data" name="data" style="display:none" value="#{day}">
+                    <button name = "entrada" type="submit" class="botao_ponto" style = "margin-bottom: 10px"> Saida </button>
+                    <table>
+                        <tr>
+                            <td class ="tabelaContorno">Dia</td>
+                            <td class ="tabelaContorno">Horas trabalhadas</td>
+                        </tr>
+                        <tr>
+                            <td class ="tabela">#{day}</td>
+                            <td class ="tabela">#{entrada}</td>
+                        </tr>
+                        <tr>
+                            <td class ="tabela">#{lastData}</td>
+                            <td class ="tabela">#{lastHoras}</td>
+                        </tr>
+                    </table>
+                </center>
+            </form>
+        </center>
+    </body>
+    
+</html>
